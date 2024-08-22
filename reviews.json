@@ -1,0 +1,124 @@
+{
+    "reviews": [
+      {
+        "professor": "Dr. Emily Johnson",
+        "subject": "Physics",
+        "stars": 5,
+        "review": "Excellent professor, explains complex topics very clearly and is always available for extra help."
+      },
+      {
+        "professor": "Dr. Michael Smith",
+        "subject": "Mathematics",
+        "stars": 4,
+        "review": "Good lecturer, but sometimes goes too fast. Very knowledgeable."
+      },
+      {
+        "professor": "Dr. Sarah Lee",
+        "subject": "Chemistry",
+        "stars": 3,
+        "review": "Decent instructor, but her grading is quite tough."
+      },
+      {
+        "professor": "Dr. Robert Brown",
+        "subject": "Biology",
+        "stars": 4,
+        "review": "Engaging lectures, but exams are tricky. Study hard!"
+      },
+      {
+        "professor": "Dr. Angela Davis",
+        "subject": "History",
+        "stars": 5,
+        "review": "Incredible professor! Makes history come alive. Highly recommend."
+      },
+      {
+        "professor": "Dr. James Wilson",
+        "subject": "Philosophy",
+        "stars": 2,
+        "review": "Not the best communicator. Lectures can be hard to follow."
+      },
+      {
+        "professor": "Dr. Karen Martinez",
+        "subject": "Economics",
+        "stars": 4,
+        "review": "Great professor with a lot of real-world examples. Assignments can be challenging."
+      },
+      {
+        "professor": "Dr. Richard Clark",
+        "subject": "Computer Science",
+        "stars": 5,
+        "review": "Fantastic teacher, very approachable and knowledgeable about the latest tech."
+      },
+      {
+        "professor": "Dr. Jennifer Lopez",
+        "subject": "Literature",
+        "stars": 3,
+        "review": "Interesting lectures, but her feedback on essays is minimal."
+      },
+      {
+        "professor": "Dr. Thomas Allen",
+        "subject": "Sociology",
+        "stars": 4,
+        "review": "Very insightful and encourages discussion. Sometimes slow in grading."
+      },
+      {
+        "professor": "Dr. Linda Thompson",
+        "subject": "Psychology",
+        "stars": 5,
+        "review": "Best professor I've ever had! Makes learning psychology fun and easy."
+      },
+      {
+        "professor": "Dr. William Harris",
+        "subject": "Political Science",
+        "stars": 3,
+        "review": "Knowledgeable, but tends to ramble during lectures."
+      },
+      {
+        "professor": "Dr. Elizabeth Moore",
+        "subject": "Art History",
+        "stars": 4,
+        "review": "Passionate about the subject, but sometimes hard to keep up with the readings."
+      },
+      {
+        "professor": "Dr. David Walker",
+        "subject": "Engineering",
+        "stars": 5,
+        "review": "Great professor, very organized and makes difficult concepts understandable."
+      },
+      {
+        "professor": "Dr. Susan Perez",
+        "subject": "Environmental Science",
+        "stars": 4,
+        "review": "Very enthusiastic and knowledgeable. Class projects are interesting."
+      },
+      {
+        "professor": "Dr. Charles King",
+        "subject": "Anthropology",
+        "stars": 3,
+        "review": "Lectures are informative, but exams are very difficult."
+      },
+      {
+        "professor": "Dr. Patricia Wright",
+        "subject": "Geography",
+        "stars": 5,
+        "review": "Excellent professor, always makes class interesting with real-life examples."
+      },
+      {
+        "professor": "Dr. Daniel Young",
+        "subject": "Business",
+        "stars": 2,
+        "review": "Not very engaging, and assignments are unclear."
+      },
+      {
+        "professor": "Dr. Barbara Scott",
+        "subject": "Music",
+        "stars": 4,
+        "review": "Very passionate about music. Class is enjoyable, but the workload is heavy."
+      },
+      {
+        "professor": "Dr. Steven Taylor",
+        "subject": "Statistics",
+        "stars": 5,
+        "review": "Best stats professor! Makes everything easy to understand and is very helpful."
+      }
+    ]
+}
