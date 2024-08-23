@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rate My Professor AI Assistant
+
+The "Rate My Professor AI Assistant" is an AI-powered platform designed to help students make informed decisions when selecting courses and professors. Leveraging advanced natural language processing and sentiment analysis, this assistant provides detailed insights into professor ratings, reviews, and teaching styles.
+
+# Technologies Used
+
+- NextJS
+- Pinecone
+- OpenAI
+- Meta/llama-3.1 LLM
+- HuggingFace embeddings
+
+# Future 
+
+- [ ] Implement a feature that allows users to submit links to various professors' pages on Rate My Professor. The data from these web pages should then be automatically scraped and inserted into Pinecone.
+- [ ] Implement an advanced search and recommendation system that allows users to query and receive personalized professor recommendations based on input criteria
+- [ ] Integrate sentiment analysis and trend tracking to provide insights into changes in professor ratings and review sentiments over time.
+- [ ] Smart-Review Summarization: Automatically generates concise summaries of student reviews, highlighting common themes, strengths, and areas for improvement.
+- [ ] Personalized Recommendations: Suggests professors and courses based on a student's learning preferences, major, and past course performance.
+- [ ] Sentiment Analysis: Analyzes the tone and sentiment of reviews to provide an overall positivity/negativity score for each professor.
+- [ ] Interactive Q&A: Allows students to ask specific questions about professors, and the AI provides answers based on aggregated review data.
+- [ ] Trend Analysis: Tracks changes in a professor's ratings over time, helping students understand trends in teaching effectiveness or student satisfaction.
 
 ## Getting Started
 
@@ -14,23 +35,10 @@ pnpm dev
 bun dev
 ```
 
+Also install python libraries:
+
+```
+pip install -r requirements.txt 
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
