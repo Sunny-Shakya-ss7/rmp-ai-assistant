@@ -8,6 +8,29 @@ For every user question, the top 3 professors that match the user question are r
 Use them to answer the question if needed.
 `;
 
+const axios = require("axios");
+const modelId = "sentence-transformers/all-MiniLM-L6-v2";
+const apiUrl = `https://api-inference.huggingface.co/pipeline/feature-extraction/${modelId}`;
+
+async function query(texts) {
+  try {
+    const response = await axios.post(
+      apiUrl,
+      {
+        inputs: texts,
+        options: { wait_for_model: true },
+      },
+      {
+        headers: { Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}` },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error querying the model:", error);
+    return null;
+  }
+}
+
 export async function POST(req) {
   const data = await req.json();
 
@@ -16,35 +39,39 @@ export async function POST(req) {
   });
 
   const index = pc.index("rag").namespace("ns1");
-  const openai = new OpenAI();
-
   const text = data[data.length - 1].content;
-  const embedding = await openai.embeddings.create({
-    model: "text-embedding-3-small",
-    input: text,
-    encoding_format: "float",
-  });
+
+  const embedding = await query(text);
 
   const results = await index.query({
     topK: 5,
     includeMetadata: true,
-    vector: embedding.data[0].embedding,
+    vector: embedding,
   });
 
   let resultString = "";
   results.matches.forEach((match) => {
     resultString += `
-  Returned Results:
-  Professor: ${match.id}
-  Review: ${match.metadata.stars}
-  Subject: ${match.metadata.subject}
-  Stars: ${match.metadata.stars}
-  \n\n`;
+      Returned Results:
+      Professor: ${match.id}
+      Review: ${match.metadata.stars}
+      Subject: ${match.metadata.subject}
+      Stars: ${match.metadata.stars}
+      \n\n`;
   });
 
   const lastMessage = data[data.length - 1];
   const lastMessageContent = lastMessage.content + resultString;
   const lastDataWithoutLastMessage = data.slice(0, data.length - 1);
+
+  /* --------------------
+          Chat completion
+    ----------------------*/
+
+  const openai = new OpenAI({
+    baseURL: "https://openrouter.ai/api/v1",
+    apiKey: process.env.OPENROUTER_API_KEY,
+  });
 
   const completion = await openai.chat.completions.create({
     model: "meta-llama/llama-3.1-8b-instruct:free",
