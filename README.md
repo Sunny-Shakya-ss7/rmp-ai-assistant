@@ -2,6 +2,8 @@
 
 An AI-powered platform designed to help students make informed decisions when selecting courses and professors. Leveraging advanced natural language processing and sentiment analysis, this assistant provides detailed insights into professor ratings, reviews, and teaching styles.
 
+## Demo: https://youtu.be/BHWjsCWYKwU
+
 # Technologies Used
 
 - NextJS
